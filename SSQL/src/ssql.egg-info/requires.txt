@@ -1,4 +1,0 @@
-mysql-connector-python>=9.0.0
-
-[dev]
-twine>=5.0.0
