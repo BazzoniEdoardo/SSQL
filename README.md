@@ -6,7 +6,7 @@ You can decide to follow the tutorial right below, or you can just see all the m
 
 Let's start by importing the API into our python project
 ```python
-from SSQL import SSQL
+from ssqlconnect.SSQL import SSQL
 ```
 ### SSQL() - Main Class
 - host (str): The MySQL server host (default: `localhost`)
@@ -17,7 +17,7 @@ from SSQL import SSQL
 - logname (str): Logger name (default: `__name__`)
 
 ```python
-from SSQL import SSQL
+from ssqlconnect.SSQL import SSQL
 
 # Initialize SSQL
 ssql = SSQL(host="localhost", user="root", password="password", logname="SSQL_Logs")
@@ -27,7 +27,7 @@ Once created the SSQL object, the connection to the MySQL server will be automat
 Now that we have created and established the connection, we need to create a database in order to be able to work with more advanced things.
 
 ```python
-from SSQL import SSQL
+from ssqlconnect.SSQL import SSQL
 
 # Initialize SSQL
 ssql = SSQL(host="localhost", user="root", password="password", logname="SSQL_Logs")
@@ -38,7 +38,8 @@ ssql.createDB(database="people", connect=True)
 With the function `createDb()`, we create a database, and because connect is True, it'll update the connection, and it will connect us to the database. Now that we have a database and we are connected to it, we can now create our first table!
 
 ```python
-from SSQL import SSQL
+from ssqlconnect.SSQL import SSQL
+from ssqlconnect import Data
 
 # Initialize SSQL
 ssql = SSQL(host="localhost", user="root", password="password", database="people" logname="SSQL_Logs")
@@ -58,7 +59,7 @@ This might seems like a lot of code, but once you understand it, it'll become ea
 As you can see, the table right now is empty, we should put some information into that.
 
 ```python
-from SSQL import SSQL
+from ssqlconnect.SSQL import SSQL
 
 # Initialize SSQL
 ssql = SSQL(host="localhost", user="root", password="password", database="people" logname="SSQL_Logs")
@@ -79,7 +80,7 @@ Now our table should look like this:
 Look at that, fantastic! Wait Harry has 0 in his wallet. Let's fix that. We can use the `update()` function to edit his wallet.
 
 ```python
-from SSQL import SSQL
+from ssqlconnect.SSQL import SSQL
 
 # Initialize SSQL
 ssql = SSQL(host="localhost", user="root", password="password", database="people" logname="SSQL_Logs")
@@ -97,7 +98,7 @@ Perfect, now the table should look like this:
 Well, what if we want to retrive all the data from this table? We can use the `selectAll()` method!
 
 ```python
-from SSQL import SSQL
+from ssqlconnect.SSQL import SSQL
 
 # Initialize SSQL
 ssql = SSQL(host="localhost", user="root", password="password", database="people" logname="SSQL_Logs")
